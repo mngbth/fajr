@@ -3,72 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fajr.mv | Quran Class for Children</title>
+<title>Fajru Quran Class | Quran Class for Children</title>
 
 <style>
 body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
-    background: #f4f9f6;
-    color: #222;
+    background: linear-gradient(#e6fff5, #fef9ff);
+    color: #333;
 }
 
 /* NAVBAR */
 .nav {
-    background: linear-gradient(90deg, #0f5132, #198754);
+    background: linear-gradient(90deg, #00b894, #00cec9);
     color: white;
-    padding: 15px 20px;
+    padding: 18px;
     text-align: center;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 /* HERO */
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(rgba(15,81,50,0.8), rgba(15,81,50,0.8)),
-                url('https://images.unsplash.com/photo-1587614382346-4ec70e388b28');
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('fajru.png');
     background-size: cover;
     background-position: center;
     color: white;
 }
 
 .hero h1 {
-    font-size: 42px;
+    font-size: 44px;
     margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 25px;
 }
 
+/* BUTTON */
 .btn {
-    background: #ffc107;
-    color: black;
-    padding: 12px 25px;
+    background: #ffcc00;
+    color: #333;
+    padding: 14px 28px;
     border: none;
-    border-radius: 30px;
+    border-radius: 40px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 16px;
     transition: 0.3s;
+    box-shadow: 0 5px 0 #e6b800;
 }
 
 .btn:hover {
-    background: #ffca2c;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 0 #e6b800;
 }
 
 /* SECTIONS */
 .section {
-    padding: 50px 20px;
-    max-width: 900px;
+    padding: 60px 20px;
+    max-width: 1000px;
     margin: auto;
     text-align: center;
 }
 
 .section h2 {
-    color: #0f5132;
+    color: #00b894;
+    font-size: 30px;
     margin-bottom: 15px;
 }
 
@@ -76,62 +82,75 @@ body {
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+    gap: 25px;
+    margin-top: 25px;
 }
 
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+}
+
+.card h3 {
+    font-size: 22px;
 }
 
 /* FORM */
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    margin-top: 20px;
 }
 
 input, select {
-    padding: 10px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 12px;
     border: 1px solid #ccc;
+    font-size: 15px;
 }
 
 /* FOOTER */
 .footer {
-    background: #0f5132;
+    background: #00b894;
     color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 30px;
+    padding: 18px;
+    margin-top: 40px;
+    font-size: 14px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="nav">🌙 Fajr.mv</div>
+<div class="nav">🌙 Fajru Quran Class</div>
 
 <section class="hero">
-    <h1>Qur'an Classes for Children</h1>
-    <p>Build strong Islamic foundation from a young age</p>
-    <button class="btn" onclick="document.getElementById('register').scrollIntoView()">Register Now</button>
+    <h1>📖 Learn Qur'an the Fun Way!</h1>
+    <p>Helping children love and understand the Qur'an 💛</p>
+    <button class="btn" onclick="document.getElementById('register').scrollIntoView()">
+        🚀 Register Now
+    </button>
 </section>
 
 <section class="section">
-    <h2>About Our Classes</h2>
+    <h2>🌟 About Our Classes</h2>
     <p>
-        At Fajr.mv, we provide a nurturing and engaging environment where children learn
-        to read, understand, and love the Qur'an. Our qualified teachers ensure each child
-        progresses with confidence and proper tajweed.
+        At Fajru Quran Class, we create a fun and caring space where children enjoy learning the Qur'an.
+        Our friendly teachers guide every child step-by-step with love, patience, and proper tajweed.
     </p>
 </section>
 
 <section class="section">
-    <h2>Class Details</h2>
+    <h2>🎒 Class Details</h2>
     <div class="cards">
         <div class="card">
             <h3>👶 Ages</h3>
@@ -153,31 +172,31 @@ input, select {
 </section>
 
 <section class="section" id="register">
-    <h2>Register Your Child</h2>
+    <h2>📝 Register Your Child</h2>
     <form onsubmit="submitForm(event)">
-        <input type="text" placeholder="Child Name" required>
-        <input type="text" placeholder="Parent Name" required>
-        <input type="tel" placeholder="Phone Number" required>
+        <input type="text" placeholder="👦 Child Name" required>
+        <input type="text" placeholder="👨‍👩‍👧 Parent Name" required>
+        <input type="tel" placeholder="📱 Phone Number" required>
         <select required>
-            <option value="">Select Age</option>
+            <option value="">🎂 Select Age</option>
             <option>5-7</option>
             <option>8-10</option>
             <option>11-12</option>
         </select>
-        <button class="btn">Submit</button>
+        <button class="btn">✅ Submit</button>
     </form>
     <p id="msg" style="color: green;"></p>
 </section>
 
 <div class="footer">
-    © 2026 Fajr.mv | Qur'an Learning for Kids
+    🌙 © 2026 Fajru.com | Making Qur'an Learning Joyful
 </div>
 
 <script>
 function submitForm(e) {
     e.preventDefault();
     document.getElementById("msg").innerText =
-        "✅ Registration submitted! We will contact you soon.";
+        "🎉 Registration submitted! We will contact you soon.";
 }
 </script>
 
