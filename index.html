@@ -3,179 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fajru Quran Class | Quran Class for Children</title>
+<title>Fajr Quran Class</title>
 
 <style>
-body {
+:root {
+    --primary: #00b894;
+    --secondary: #00cec9;
+    --accent: #ffcc00;
+    --bg: #f4fffb;
+    --text: #1f2d2a;
+}
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: "Segoe UI", sans-serif;
-    background: #f8fffb;
-    color: #333;
+    background: var(--bg);
+    color: var(--text);
 }
 
 /* NAVBAR */
 .nav {
-    background: linear-gradient(90deg, #00b894, #00cec9);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(0,184,148,0.85);
     color: white;
-    padding: 18px;
+    padding: 16px;
     text-align: center;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 1000;
 }
 
-/* HERO IMAGE (NO OVERLAY) */
-.hero-image {
+/* HERO IMAGE */
+.hero-image img {
     width: 100%;
-    height: 300px;
-    background: url('fajru.png') center/cover no-repeat;
+    height: auto;
+    display: block;
 }
 
-/* HERO CONTENT BELOW IMAGE */
+/* HERO CONTENT */
 .hero-content {
-    max-width: 800px;
-    margin: -60px auto 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
     background: white;
-    padding: 30px;
-    border-radius: 20px;
+    border-radius: 24px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 
 .hero-content h1 {
-    font-size: 36px;
+    font-size: 42px;
     margin-bottom: 10px;
 }
 
 .hero-content p {
     font-size: 18px;
-    margin-bottom: 20px;
+    opacity: 0.8;
+    margin-bottom: 25px;
 }
 
 /* BUTTON */
 .btn {
-    background: #ffcc00;
+    background: var(--accent);
     color: #333;
-    padding: 14px 28px;
+    padding: 14px 30px;
     border: none;
-    border-radius: 40px;
-    cursor: pointer;
+    border-radius: 50px;
     font-weight: bold;
-    font-size: 16px;
+    cursor: pointer;
     transition: 0.3s;
-    box-shadow: 0 5px 0 #e6b800;
+    box-shadow: 0 6px 0 #e6b800;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 0 #e6b800;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 0 #e6b800;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
-    padding: 60px 20px;
-    max-width: 1000px;
+    padding: 80px 20px;
+    max-width: 1100px;
     margin: auto;
     text-align: center;
 }
 
 .section h2 {
-    color: #00b894;
-    font-size: 28px;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.section p {
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.8;
 }
 
 /* CARDS */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 25px;
-    margin-top: 25px;
+    margin-top: 40px;
 }
 
 .card {
     background: white;
-    padding: 25px;
+    padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
 }
 
 /* FORM */
 form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
+    gap: 14px;
+    margin-top: 30px;
 }
 
 input, select {
-    padding: 12px;
+    padding: 14px;
     border-radius: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     font-size: 15px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
 }
 
 /* FOOTER */
 .footer {
-    background: #00b894;
+    background: var(--primary);
     color: white;
     text-align: center;
-    padding: 18px;
-    margin-top: 40px;
-    font-size: 14px;
+    padding: 25px;
+    margin-top: 60px;
+}
+
+/* MOBILE */
+@media(max-width: 600px){
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content {
+        padding: 25px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="nav">🌙 Fajru Quran Class</div>
+<div class="nav">🌙 Fajr Quran Class</div>
 
-<!-- CLEAN IMAGE -->
-<div class="hero-image"></div>
-
-<!-- TEXT BELOW IMAGE -->
-<div class="hero-content">
-    <h1>📖 Learn Qur'an the Fun Way!</h1>
-    <p>Helping children love and understand the Qur'an 💛</p>
-    <button class="btn" onclick="document.getElementById('register').scrollIntoView()">
-        🚀 Register Now
-    </button>
+<!-- FULL IMAGE -->
+<div class="hero-image">
+    <img src="fajru.png" alt="Fajr Quran Class">
 </div>
 
+<!-- HERO TEXT -->
+<div class="hero-content">
+    <h1>📖 Learn Qur'an with Love & Excellence</h1>
+    <p>Structured, engaging, and spiritually uplifting learning for children</p>
+    <button class="btn" onclick="scrollToForm()">🚀 Register Now</button>
+</div>
+
+<!-- ABOUT -->
 <section class="section">
-    <h2>🌟 About Our Classes</h2>
+    <h2>🌟 Why Choose Us</h2>
     <p>
-        At Fajru Quran Class, we create a fun and caring space where children enjoy learning the Qur'an.
-        Our friendly teachers guide every child step-by-step with love, patience, and proper tajweed.
+        We combine traditional Qur'an learning with modern teaching methods,
+        ensuring children develop strong recitation, understanding, and love for Islam.
     </p>
 </section>
 
+<!-- FEATURES -->
 <section class="section">
-    <h2>🎒 Class Details</h2>
     <div class="cards">
         <div class="card">
             <h3>👶 Ages</h3>
-            <p>5 - 12 Years</p>
+            <p>5 – 12 Years</p>
         </div>
         <div class="card">
             <h3>📅 Schedule</h3>
-            <p>Sunday - Thursday<br>After Maghrib</p>
+            <p>Sunday – Thursday<br>After Maghrib</p>
         </div>
         <div class="card">
-            <h3>📍 Location</h3>
-            <p>Your Island / Online Option</p>
+            <h3>📍 Mode</h3>
+            <p>Island Classes + Online</p>
         </div>
         <div class="card">
-            <h3>📖 Focus</h3>
-            <p>Reading, Tajweed & Memorization</p>
+            <h3>📖 Curriculum</h3>
+            <p>Tajweed, Reading & Hifz</p>
         </div>
     </div>
 </section>
 
+<!-- FORM -->
 <section class="section" id="register">
     <h2>📝 Register Your Child</h2>
     <form onsubmit="submitForm(event)">
@@ -190,14 +231,18 @@ input, select {
         </select>
         <button class="btn">✅ Submit</button>
     </form>
-    <p id="msg" style="color: green;"></p>
+    <p id="msg" style="margin-top:15px;color:green;"></p>
 </section>
 
 <div class="footer">
-    🌙 © 2026 Fajru.com | Making Qur'an Learning Joyful
+    🌙 © 2026 Fajr Quran Class | Nurturing Young Hearts with Qur'an
 </div>
 
 <script>
+function scrollToForm() {
+    document.getElementById('register').scrollIntoView({behavior:'smooth'});
+}
+
 function submitForm(e) {
     e.preventDefault();
     document.getElementById("msg").innerText =
