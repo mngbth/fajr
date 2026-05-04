@@ -3,252 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fajr Quran Class</title>
+<title>Akuru Class</title>
 
 <style>
-:root {
-    --primary: #00b894;
-    --secondary: #00cec9;
-    --accent: #ffcc00;
-    --bg: #f4fffb;
-    --text: #1f2d2a;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: "Segoe UI", sans-serif;
-    background: var(--bg);
-    color: var(--text);
-}
-
-/* NAVBAR */
-.nav {
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(12px);
-    background: rgba(0,184,148,0.85);
-    color: white;
-    padding: 16px;
+    margin: 0;
+    font-family: sans-serif;
     text-align: center;
-    font-size: 20px;
-    font-weight: 600;
-    z-index: 1000;
 }
 
-/* HERO IMAGE */
-.hero-image img {
+img {
     width: 100%;
     height: auto;
-    display: block;
 }
 
-/* HERO CONTENT */
-.hero-content {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 40px;
-    background: white;
-    border-radius: 24px;
-    text-align: center;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-}
-
-.hero-content h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    font-size: 18px;
-    opacity: 0.8;
-    margin-bottom: 25px;
-}
-
-/* BUTTON */
-.btn {
-    background: var(--accent);
-    color: #333;
-    padding: 14px 30px;
-    border: none;
-    border-radius: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 6px 0 #e6b800;
-}
-
-.btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 0 #e6b800;
-}
-
-/* SECTION */
-.section {
-    padding: 80px 20px;
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
-}
-
-.section h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
-    color: var(--primary);
-}
-
-.section p {
-    max-width: 700px;
-    margin: auto;
-    opacity: 0.8;
-}
-
-/* CARDS */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    transition: 0.3s;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-/* FORM */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin-top: 30px;
-}
-
-input, select {
-    padding: 14px;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    font-size: 15px;
-}
-
-input:focus, select:focus {
-    outline: none;
-    border-color: var(--primary);
-}
-
-/* FOOTER */
-.footer {
-    background: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 60px;
-}
-
-/* MOBILE */
-@media(max-width: 600px){
-    .hero-content h1 {
-        font-size: 28px;
-    }
-
-    .hero-content {
-        padding: 25px;
-    }
+.content {
+    padding: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="nav">🌙  Fajr Quran Class</div>
+<img src="fajr.jpg" alt="Quran Class">
 
-<!-- FULL IMAGE -->
-<div class="hero-image">
-    <img src="fajr.jpg" alt="Fajr Quran Class">
-</div>
+<div class="content">
+    <h1>Akuru Class</h1>
 
-<!-- HERO TEXT -->
-<div class="hero-content">
-    <h1>📖 Learn Qur'an with Love & Excellence</h1>
-    <p>Structured, engaging, and spiritually uplifting learning for children</p>
-    <button class="btn" onclick="scrollToForm()">🚀 Register Now</button>
-</div>
-
-<!-- ABOUT -->
-<section class="section">
-    <h2>🌟 Why Choose Us</h2>
     <p>
-        We combine traditional Qur'an learning with modern teaching methods,
-        ensuring children develop strong recitation, understanding, and love for Islam.
+        A simple Quran class for children aged 2–12.
     </p>
-</section>
 
-<!-- FEATURES -->
-<section class="section">
-    <div class="cards">
-        <div class="card">
-            <h3>👶 Ages</h3>
-            <p>5 – 12 Years</p>
-        </div>
-        <div class="card">
-            <h3>📅 Schedule</h3>
-            <p>Sunday – Thursday<br>After Maghrib</p>
-        </div>
-        <div class="card">
-            <h3>📍 Mode</h3>
-            <p>Island Classes + Online</p>
-        </div>
-        <div class="card">
-            <h3>📖 Curriculum</h3>
-            <p>Tajweed, Reading & Hifz</p>
-        </div>
-    </div>
-</section>
+    <p>
+        We focus on learning and recognizing Arabic letters.
+    </p>
 
-<!-- FORM -->
-<section class="section" id="register">
-    <h2>📝 Register Your Child</h2>
-    <form onsubmit="submitForm(event)">
-        <input type="text" placeholder="👦 Child Name" required>
-        <input type="text" placeholder="👨‍👩‍👧 Parent Name" required>
-        <input type="tel" placeholder="📱 Phone Number" required>
-        <select required>
-            <option value="">🎂 Select Age</option>
-            <option>5-7</option>
-            <option>8-10</option>
-            <option>11-12</option>
-        </select>
-        <button class="btn">✅ Submit</button>
-    </form>
-    <p id="msg" style="margin-top:15px;color:green;"></p>
-</section>
+    <p>
+        Children learn through reading, writing, coloring, playtime, and small rewards.
+    </p>
 
-<div class="footer">
-    🌙 © 2026 Fajr Quran Class | Nurturing Young Hearts with Qur'an
+    <p>
+        We also introduce Quran reading, recitation, and memorization step by step.
+    </p>
+
+    <p>
+        Our goal is simple: every child can recognize and read letters with confidence.
+    </p>
+
+    <p>
+        Contact via WhatsApp: <br>
+        <a href="https://wa.me/9607958020">7958020</a>
+    </p>
 </div>
-
-<script>
-function scrollToForm() {
-    document.getElementById('register').scrollIntoView({behavior:'smooth'});
-}
-
-function submitForm(e) {
-    e.preventDefault();
-    document.getElementById("msg").innerText =
-        "🎉 Registration submitted! We will contact you soon.";
-}
-</script>
 
 </body>
 </html>
